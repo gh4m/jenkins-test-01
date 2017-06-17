@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'ip addr'
-                sh 'env | sort'
+                sh 'echo $mysecret | grep s'
             }
         }
     }
