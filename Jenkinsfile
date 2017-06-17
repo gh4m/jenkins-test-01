@@ -13,7 +13,9 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'ip addr'
-                sh 'env > /var/tmp/output.env'
+                sh 'pwd'
+                sh 'mkdir build/files'
+                sh 'env > build/files/env-output.txt'
             }
         }
     }
