@@ -1,5 +1,8 @@
 pipeline {
     agent { docker 'python:3.5.1' }
+    environment {
+        mysecret = credentials('test-secret-id')
+    }
     stages {
         stage('build') {
             environment {
