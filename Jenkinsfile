@@ -22,6 +22,9 @@ pipeline {
     post {
         always {
             archive 'build/files/*'
+            mail to: 'fromaws@srmstar.net',
+                subject: "ran Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "looks okay ${env.BUILD_URL}"
         }
     }
 }
