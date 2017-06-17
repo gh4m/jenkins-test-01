@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'ip addr'
-                sh 'eval echo \$$myprintvar'
+                sh 'env > /var/tmp/output.env'
             }
         }
     }
