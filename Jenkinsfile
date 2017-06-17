@@ -2,6 +2,7 @@ pipeline {
     agent { docker 'python:3.5.1' }
     environment {
         mysecret = credentials('test-secret-id')
+        myprintvar = 'mysecret'
     }
     stages {
         stage('build') {
@@ -12,7 +13,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'ip addr'
-                sh 'echo $mysecret | grep s'
+                sh 'eval echo $$myprintvar'
             }
         }
     }
