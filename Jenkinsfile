@@ -1,7 +1,7 @@
 pipeline {
     agent { docker 'python:3.5.1' }
     parameters {
-        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+        string(name: 'Greeting', defaultValue: 'Hello1', description: 'How should I greet the declarative world?')
     }
     environment {
         mysecret = credentials('test-secret-id')
@@ -36,7 +36,7 @@ pipeline {
         }
     }
 }
-properties([parameters([string(defaultValue: 'Hello', description: 'How should I greet the world?', name: 'Greeting')])])
+properties([parameters([string(defaultValue: 'Hello2', description: 'How should I greet the script  world?', name: 'Greeting')])])
 
 node {
     echo "${params.Greeting} World!"
