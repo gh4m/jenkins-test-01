@@ -1,5 +1,5 @@
 #!groovy
-@Library('jenkins-test-lib')
+@Library('jenkins-test-lib') _
 
 pipeline {
     agent { docker 'python:3.5.1' }
