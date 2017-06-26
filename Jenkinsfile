@@ -3,7 +3,7 @@
 
 // def z = new org.foo.Zot("/tmp/test-jenkins-lib")
 node {
-   createFile "/tmp/test-jenkins-lib"
+   createFile "build/files/lib-output.txt"
 }
 
 pipeline {
