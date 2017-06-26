@@ -5,7 +5,8 @@ node {
    stage("Example Stage") {
      sh 'pwd'
      sh 'mkdir -p build/files'
-     createFile "build/files/lib-output.txt"
+     def z = new org.foo.Zot()
+     z.createFile "build/files/lib-output.txt"
      sh 'env > build/files/env-output.txt'
      archiveArtifacts artifacts: 'build/files/*.txt'
    }
