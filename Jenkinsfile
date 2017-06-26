@@ -1,10 +1,6 @@
 #!/usr/bin/groovy
 @Library('jenkins-test-lib') import static org.foo.Zot.*
 
-// def z = new org.foo.Zot("/tmp/test-jenkins-lib")
-node {
-   createFile "build/files/lib-output.txt"
-}
 
 pipeline {
     agent { docker 'python:3.5.1' }
@@ -44,6 +40,12 @@ pipeline {
         }
     }
 }
+
+// def z = new org.foo.Zot("/tmp/test-jenkins-lib")
+node {
+   createFile "build/files/lib-output.txt"
+}
+
 properties([parameters([string(defaultValue: 'Hello2', description: 'How should I greet the script  world?', name: 'Greeting2')])])
 
 node {
