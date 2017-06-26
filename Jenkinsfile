@@ -4,6 +4,6 @@
 node {
    sh 'pwd'
    sh 'mkdir -p build/files'
-   create2File "build/files/lib-output.txt"
+   createFile "build/files/lib-output.txt"
    sh 'env > build/files/env-output.txt'
 }
