@@ -2,8 +2,8 @@
 @Library('jenkins-test-lib') 
 import org.foo.Zot.createFile
 
-def z = new org.foo.Zot()
-z.createFile("/tmp/test-jenkins-lib")
+def z = new org.foo.Zot("/tmp/test-jenkins-lib")
+z.createFile()
 
 pipeline {
     agent { docker 'python:3.5.1' }
