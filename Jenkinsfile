@@ -1,6 +1,5 @@
 #!/usr/bin/groovy
-@Library('jenkins-test-lib') 
-import org.foo.Zot
+@Library('jenkins-test-lib') import static org.foo.Zot.*
 
 // def z = new org.foo.Zot("/tmp/test-jenkins-lib")
 node {
