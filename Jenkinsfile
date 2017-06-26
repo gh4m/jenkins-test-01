@@ -1,4 +1,4 @@
-#!groovy
+#!/usr/bin/groovy
 @Library('jenkins-test-lib') _
 
 pipeline {
