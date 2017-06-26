@@ -1,5 +1,9 @@
 #!/usr/bin/groovy
-@Library('jenkins-test-lib') _
+@Library('jenkins-test-lib') 
+import org.foo.Zot.createFile
+
+def z = new org.foo.Zot()
+z.createFile("/tmp/test-jenkins-lib")
 
 pipeline {
     agent { docker 'python:3.5.1' }
