@@ -7,6 +7,6 @@ node {
      sh 'mkdir -p build/files'
      createFile "build/files/lib-output.txt"
      sh 'env > build/files/env-output.txt'
-     archiveArtifacts artifacts: 'build/files/*.txt',
+     archiveArtifacts artifacts: 'build/files/*.txt'
    }
 }
