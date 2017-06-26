@@ -7,6 +7,6 @@ node {
    sh 'ip addr'
    sh 'pwd'
    sh 'mkdir -p build/files'
-   sh 'env > build/files/env-output.txt'
    createFile "build/files/lib-output.txt"
+   sh 'env > build/files/env-output.txt'
 }
