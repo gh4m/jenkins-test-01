@@ -11,5 +11,8 @@ node {
      archiveArtifacts artifacts: 'build/files/*.txt'
      sayHello 'Joe'
      sayHello() /* invoke with default arguments */
+     acme.name = 'Alice'
+     echo acme.name /* prints: 'Alice' */
+     acme.caution 'The queen is angry!' /* prints: 'Hello, Alice. CAUTION: The queen is angry!' */
    }
 }
